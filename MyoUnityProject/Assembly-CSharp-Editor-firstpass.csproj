@@ -616,17 +616,17 @@
     <Reference Include="Unity.Rider.Editor">
         <HintPath>C:/Users/gina7/Desktop/Unity3D_in Class/MyoUnityGameProject_2021-/MyoUnityProject/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TextMeshPro">
-        <HintPath>C:/Users/gina7/Desktop/Unity3D_in Class/MyoUnityGameProject_2021-/MyoUnityProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-        <HintPath>C:/Users/gina7/Desktop/Unity3D_in Class/MyoUnityGameProject_2021-/MyoUnityProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
         <HintPath>C:/Users/gina7/Desktop/Unity3D_in Class/MyoUnityGameProject_2021-/MyoUnityProject/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
         <HintPath>C:/Users/gina7/Desktop/Unity3D_in Class/MyoUnityGameProject_2021-/MyoUnityProject/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+        <HintPath>C:/Users/gina7/Desktop/Unity3D_in Class/MyoUnityGameProject_2021-/MyoUnityProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+        <HintPath>C:/Users/gina7/Desktop/Unity3D_in Class/MyoUnityGameProject_2021-/MyoUnityProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
