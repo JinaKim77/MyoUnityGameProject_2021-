@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpawnPoints:
-  - {fileID: 4656642443406482583, guid: 45fadac271cdfcc43878bac9018dd751, type: 3}
+  - {fileID: 6353864397125888623}
   projectile: {fileID: -5886198105835640310, guid: 9fe6dd36974d9814c86d7257212db15d,
     type: 3}
   timeBetweenShots: 600

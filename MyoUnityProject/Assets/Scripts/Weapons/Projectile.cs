@@ -6,25 +6,21 @@
 /// </summary>
 public class Projectile : MonoBehaviour
 {
-    #region Public Variables
+    //#region Public Variables
     public LayerMask collisionMask;
     public Color trailColor;
-    #endregion
+    //#endregion
 
-    #region Private Serialized Variables
-    [SerializeField]
-    private float _speed = 10;
-    [SerializeField]
-    private float _damage = 1;
-    [SerializeField]
-    float _lifetime = 3;
-    [SerializeField]
-    float _skinWidth = .1f;
+    //#region Private Serialized Variables
+    [SerializeField] private float _speed = 10;
+    [SerializeField] private float _damage = 1;
+    [SerializeField] float _lifetime = 3;
+    [SerializeField] float _skinWidth = .1f;
     private bool _isPenetrating;
 
-    #endregion
+    //#endregion
 
-    #region Unity Methods
+    //#region Unity Methods
     private void Start()
     {
         Destroy(gameObject, _lifetime);
@@ -41,12 +37,18 @@ public class Projectile : MonoBehaviour
         CheckCollisions(moveDistance);
         transform.Translate(Vector3.forward * moveDistance);
     }
-    #endregion
+    //#endregion
 
-    public void SetDamage(int damage) => _damage = damage;
-    public void SetPenetrating(bool isPenetrating) => _isPenetrating = isPenetrating;
+    public void SetDamage(int damage) {
+        _damage = damage;
+    }
+    public void SetPenetrating(bool isPenetrating){
+        _isPenetrating = isPenetrating;
+    } 
 
-    public void SetSpeed(float newSpeed) => _speed = newSpeed;
+    public void SetSpeed(float newSpeed){
+        _speed = newSpeed;
+    } 
 
     private void CheckCollisions(float moveDistance)
     {

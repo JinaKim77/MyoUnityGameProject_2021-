@@ -3,7 +3,7 @@
 public class RadialBeltController : MonoBehaviour, IFireable
 {
 
-    public Transform radialBeltMount;
+    //public Transform radialBeltMount;
     public RadialBelt _equippedBelt;
 
     public void OnTriggerHold()

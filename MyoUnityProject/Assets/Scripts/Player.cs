@@ -4,12 +4,12 @@
 /// Player Script
 /// <para>Expects PlayerController and GunController scripts to be present on GameObject</para>
 /// </summary>
-[RequireComponent(typeof(PlayerController))]
-[RequireComponent(typeof(GunController))]
-[RequireComponent(typeof(RadialBeltController))]
+//[RequireComponent(typeof(PlayerController))]
+//[RequireComponent(typeof(GunController))]
+//[RequireComponent(typeof(RadialBeltController))]
 public class Player : BaseLivingEntity, IMyoGesturable
 {
-    #region Public Variables
+    //#region Public Variables
     /// <summary>
     /// Player Movement Speed
     /// </summary>
@@ -17,25 +17,25 @@ public class Player : BaseLivingEntity, IMyoGesturable
     public Crosshairs crosshairs;
     public float minCrosshairDistance = 1.0f;
     public float myoCrosshairDistance = 5.0f;
-    public bool isInvincible;
+    //public bool isInvincible;
 
-    [Header("Use Myo")]
+    //[Header("Use Myo")]
     public bool isUsingMyo;
-    #endregion
+    //#endregion
 
-    #region Private Variables
+    //#region Private Variables
     private Thalmic.Myo.Pose _lastPose;
-    float hapticOnDamegeReceived;
-    #endregion
+    //float hapticOnDamegeReceived;
+    //#endregion
 
-    #region References
+    //#region References
     private Camera _cam;
     private PlayerController _playerController;
     private GunController _gunController;
     private RadialBeltScript _radialBeltScript;
-    #endregion
+    //#endregion
 
-    #region Unity Methods
+    //#region Unity Methods
     private void Awake()
     {
         _playerController = GetComponent<PlayerController>();
@@ -46,7 +46,7 @@ public class Player : BaseLivingEntity, IMyoGesturable
         _radialBeltScript = GetComponentInChildren<RadialBeltScript>();
 
         _cam = Camera.main;
-        FindObjectOfType<Spawner>().OnNewWave += OnNewWave;
+        //FindObjectOfType<Spawner>().OnNewWave += OnNewWave;
 
         // Subcsribe to OnNewPose
         MyoGestureController.OnNewPose += OnNewPose;
@@ -58,7 +58,7 @@ public class Player : BaseLivingEntity, IMyoGesturable
     {
         //=> 
         base.Start();
-        hapticOnDamegeReceived = health;
+        //hapticOnDamegeReceived = health;
     }
 
     private void Update()
@@ -78,7 +78,7 @@ public class Player : BaseLivingEntity, IMyoGesturable
             if (groundPlane.Raycast(ray, out float rayDistance))
             {
                 UnityEngine.Vector3 point = ray.GetPoint(rayDistance);
-                Debug.DrawLine(ray.origin, point, Color.red);
+                //Debug.DrawLine(ray.origin, point, Color.red);
                 //Debug.DrawRay(ray.origin,ray.direction * 100,Color.red);
                 _playerController.LookAt(point);
                 // Set crosshairs on mouse point
@@ -117,18 +117,18 @@ public class Player : BaseLivingEntity, IMyoGesturable
         if (Input.GetKeyDown(KeyCode.P)) isUsingMyo = !isUsingMyo;
 
         // Haptic if the player takes damage
-        if (health < hapticOnDamegeReceived)
-        {
+        //if (health < hapticOnDamegeReceived)
+        //{
             //HapticFeedback("Short");
-            hapticOnDamegeReceived = health;
-        }
+          //  hapticOnDamegeReceived = health;
+        //}
 
         // Kill the Player if it falls off the map.
-        if (transform.position.y < -10)
-        {
+        //if (transform.position.y < -10)
+       // {
             //HapticFeedback("Long");
-            TakeDamage(health);
-        }
+         //   TakeDamage(health);
+        //}
 
 
         // Debugging - Feedback
@@ -138,9 +138,9 @@ public class Player : BaseLivingEntity, IMyoGesturable
 
 
     }
-    #endregion
+    //#endregion
 
-    #region Implementation of IMyoGesturable
+    //Implementation of IMyoGesturable
     public void OnNewPose(Thalmic.Myo.Pose newPose)
     {
         bool isPrimaryFiring = newPose == Thalmic.Myo.Pose.Fist;
@@ -165,29 +165,29 @@ public class Player : BaseLivingEntity, IMyoGesturable
     {
         if (_lastPose == Thalmic.Myo.Pose.Fist) _gunController.OnTriggerHold();
     }
-    #endregion
+    //#endregion
 
-    #region BaseLivingEntity Overrides
-    protected override void Die()
-    {
-        AudioManager.instance.PlaySound("Player Death", Vector3.zero);
-        base.Die();
+    //#region BaseLivingEntity Overrides
+    //protected override void Die()
+    //{
+      //  AudioManager.instance.PlaySound("Player Death", Vector3.zero);
+       // base.Die();
         //_feedbackController.ShakeAndVibrate(Enums.FeedbackType.Long);
-    }
+    //}
 
-    public override void TakeDamage(float damage)
-    {
-        if (!isInvincible)
-        {
-            base.TakeDamage(damage);
-        }
+    //public override void TakeDamage(float damage)
+    //{
+      //  if (!isInvincible)
+        //{
+          //  base.TakeDamage(damage);
+       // }
         //_feedbackController.ShakeAndVibrate(Enums.FeedbackType.Medium);
-    }
-    #endregion
+    //}
+    //#endregion
 
-    private void OnNewWave(int waveNumber)
-    {
-        health = startingHealth;
-        _gunController.EquipGun(waveNumber - 1);
-    }
+    //private void OnNewWave(int waveNumber)
+    //{
+      //  health = startingHealth;
+        //_gunController.EquipGun(waveNumber - 1);
+    //}
 }

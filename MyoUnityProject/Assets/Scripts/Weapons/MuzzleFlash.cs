@@ -2,17 +2,19 @@
 
 public class MuzzleFlash : MonoBehaviour
 {
-    #region Public Variables
+    //#region Public Variables
     public GameObject flashHolder;
     public float flashTime;
 
     public Sprite[] flashSprites;
     public SpriteRenderer[] flashSpriteRenderers;
-    #endregion
+    //#endregion
 
-    #region Unity Methods
-    private void Start() => Deactivate();
-    #endregion
+    //#region Unity Methods
+    private void Start(){
+        Deactivate();
+    } 
+    //#endregion
 
     public void Activate()
     {

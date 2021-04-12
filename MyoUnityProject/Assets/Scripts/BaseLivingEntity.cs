@@ -7,27 +7,27 @@ using UnityEngine;
 /// </summary>
 public abstract class BaseLivingEntity : MonoBehaviour, IDamageable
 {
-    #region Public Variables
+    //#region Public Variables
     public float startingHealth;
-    #endregion
+    //#endregion
 
-    #region Protected Variables
+    //#region Protected Variables
     public float health { get; protected set; }
     protected bool isDead;
     //protected IFeedbackController _feedbackController;
-    #endregion
+    //#endregion
 
-    #region Events
+    //#region Events
     public event Action OnDeath;
-    #endregion
+    //#endregion
 
-    #region Unity Methods
+    //#region Unity Methods
     protected virtual void Start()
     {
         //_feedbackController = FindObjectOfType<FeedbackController>();
         health = startingHealth;
     }
-    #endregion
+    //#endregion
 
     public virtual void TakeHit(float damage, UnityEngine.Vector3 hitPoint, UnityEngine.Vector3 hitDirection) => TakeDamage(damage);
 
@@ -41,7 +41,7 @@ public abstract class BaseLivingEntity : MonoBehaviour, IDamageable
         }
     }
 
-    [ContextMenu("Self Destruct")]
+    //[ContextMenu("Self Destruct")]
     protected virtual void Die()
     {
         isDead = true;

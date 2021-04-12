@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class RadialBeltScript : MonoBehaviour, IFireable
 {
-    [Header("Belt Setup")]
+    //[Header("Belt Setup")]
     public Transform[] notches;
     public GameObject beltNotchPrefab;
     public Projectile projectile;
@@ -12,7 +12,7 @@ public class RadialBeltScript : MonoBehaviour, IFireable
 
     public bool IsCoolingDown => _timeUntilNextShot > 0f;
 
-    [Header("Audio")]
+    //[Header("Audio")]
     public AudioClip shootAudio;
     public AudioClip reloadAudio;
 
@@ -23,7 +23,7 @@ public class RadialBeltScript : MonoBehaviour, IFireable
     private Transform _bulletParent;
     //private IFeedbackController _feedbackController;
 
-    #region Unity Methods
+    //#region Unity Methods
     private void Start()
     {
         projectile.SetDamage(10);
@@ -53,9 +53,9 @@ public class RadialBeltScript : MonoBehaviour, IFireable
     {
         Reload();
     }
-    #endregion
+    //#endregion
 
-    #region Implementation of IFireable
+    //Implementation of IFireable
     public void OnTriggerHold()
     {
         Shoot();
@@ -66,9 +66,7 @@ public class RadialBeltScript : MonoBehaviour, IFireable
     {
         _triggerReleasedSinceLastShot = true;
     }
-    #endregion
 
-    #region Private Methods
     private void Shoot()
     {
         if (_timeUntilNextShot <= 0f)
@@ -103,5 +101,4 @@ public class RadialBeltScript : MonoBehaviour, IFireable
             AudioManager.instance.PlaySound(reloadAudio, transform.position);
         }        
     }
-    #endregion
 }

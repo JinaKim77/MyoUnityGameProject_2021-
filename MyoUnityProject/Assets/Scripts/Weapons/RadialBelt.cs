@@ -7,19 +7,19 @@ public class RadialBelt : MonoBehaviour, IFireable
     public Projectile projectile;
     public float shotVelocity = 35;
 
-    [Header("Shell")]
+    //[Header("Shell")]
     // Shell
     public Transform shell;
     public Transform shellEjectionPoint;
 
-    [Header("Audio")]
+    //[Header("Audio")]
     public AudioClip shootAudio;
 
     // Fire Mode
     public FireMode fireMode;
     private bool _triggerReleasedSinceLastShot;
 
-    #region Implementation of IFireable
+    //Implementation of IFireable
     public void OnTriggerHold()
     {
          Shoot();
@@ -30,9 +30,8 @@ public class RadialBelt : MonoBehaviour, IFireable
     {
         _triggerReleasedSinceLastShot = true;
     }
-    #endregion
 
-    #region Private Methods
+    //#region Private Methods
     private void Shoot()
     {
 
@@ -48,5 +47,5 @@ public class RadialBelt : MonoBehaviour, IFireable
 
         AudioManager.instance.PlaySound(shootAudio, transform.position);
     }
-    #endregion
+    //#endregion
 }

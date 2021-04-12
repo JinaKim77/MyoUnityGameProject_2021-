@@ -9,107 +9,103 @@ using System;
 /// <para>Expects NavMeshAgent component on GameObject</para>
 /// <para>Expects a GameObject with tag "Player" to be present in scene.</para>
 /// </summary>
-[RequireComponent(typeof(NavMeshAgent))]
+//[RequireComponent(typeof(NavMeshAgent))]
 public class Enemy : BaseLivingEntity
 {
     public ParticleSystem deathEffect;
     public static event Action OnDeathStatic;
 
-    #region Private/Serialized Variables
-    [SerializeField]
-    private EnemyState _currentState;
-    [SerializeField]
-    float attackDistanceThreshold = .5f;
-    [SerializeField]
-    float timeBetweenAttacks = 1;
-    [SerializeField]
-    float _damage = 1;
+    //#region Private/Serialized Variables
+    //[SerializeField] private EnemyState _currentState;
+    //[SerializeField] float attackDistanceThreshold = .5f;
+    //[SerializeField] float timeBetweenAttacks = 1;
+    //[SerializeField] float _damage = 1;
 
     //=================Do not delete this=====================
     public GameObject oneUp;
     [SerializeField] int coinValue = 1;
     //=======================================================
 
-    private NavMeshAgent _pathfinder;
-    private Transform _target;
-    private BaseLivingEntity _targetEntity;
-    private Material _skinMaterial;
-    private Color _originalColour;
+    //private NavMeshAgent _pathfinder;
+    //private Transform _target;
+    //private BaseLivingEntity _targetEntity;
+    //private Material _skinMaterial;
+    //private Color _originalColour;
 
-    private float _nextAttackTime;
-    private float _myCollisionRadius;
-    private float _targetCollisionRadius;
+    ///private float _nextAttackTime;
+    //private float _myCollisionRadius;
+    //private float _targetCollisionRadius;
 
-    private bool _hasTarget => _target != null;
-    #endregion
+    //private bool _hasTarget => _target != null;
+    //#endregion
 
-    #region Unity Methods
-    private void Awake()
-    {
+    //#region Unity Methods
+    //private void Awake()
+    //{
         // Pathfinding
-        _pathfinder = GetComponent<NavMeshAgent>();
+        //_pathfinder = GetComponent<NavMeshAgent>();
 
         // Check that player exists and is still alive...
-        if (GameObject.FindGameObjectWithTag("Player") != null)
-        {
+       // if (GameObject.FindGameObjectWithTag("Player") != null)
+       // {
             //_hasTarget = true;
             // Set up target variables.
-            _target = GameObject.FindGameObjectWithTag("Player").transform;
-            _targetEntity = _target.GetComponent<BaseLivingEntity>();
+            //_target = GameObject.FindGameObjectWithTag("Player").transform;
+            //_targetEntity = _target.GetComponent<BaseLivingEntity>();
 
             // Set up collision variables.
-            _myCollisionRadius = GetComponent<CapsuleCollider>().radius;
-            _targetCollisionRadius = _target.GetComponent<CapsuleCollider>().radius;
-        }
-    }
+            //_myCollisionRadius = GetComponent<CapsuleCollider>().radius;
+            //_targetCollisionRadius = _target.GetComponent<CapsuleCollider>().radius;
+       // }
+    //}
 
-    protected override void Start()
-    {
-        base.Start();
+   // protected override void Start()
+   // {
+     //   base.Start();
 
         // Check that player exists and is still alive...
-        if (_hasTarget)
-        {
+        //if (_hasTarget)
+       // {
             //_hasTarget = true;
-            _currentState = EnemyState.Chasing;
-            _targetEntity.OnDeath += OnTargetDeath;
+         //   _currentState = EnemyState.Chasing;
+         //   _targetEntity.OnDeath += OnTargetDeath;
 
             // Begin the coroutine to follow the Player.
-            StartCoroutine(UpdatePath());
-        }
+          //  StartCoroutine(UpdatePath());
+       //// }
 
-    }
+    //}
 
-    private void Update()
-    {
-        if (_hasTarget)
-        {
-            if (Time.time > _nextAttackTime)
-            {
-                float sqrDstToTarget = (_target.position - transform.position).sqrMagnitude;
-                if (sqrDstToTarget < Mathf.Pow(attackDistanceThreshold + _myCollisionRadius + _targetCollisionRadius, 2))
-                {
-                    _nextAttackTime = Time.time + timeBetweenAttacks;
-                    AudioManager.instance.PlaySound("Enemy Attack", transform.position);
-                    StartCoroutine(Attack());
-                }
-            }
-        }
-    }
-    #endregion
+   // private void Update()
+   // {
+        //if (_hasTarget)
+        //{
+          //  if (Time.time > _nextAttackTime)
+          //  {
+          //      float sqrDstToTarget = (_target.position - transform.position).sqrMagnitude;
+          //      if (sqrDstToTarget < Mathf.Pow(attackDistanceThreshold + _myCollisionRadius + _targetCollisionRadius, 2))
+           //     {
+           //         _nextAttackTime = Time.time + timeBetweenAttacks;
+           //         AudioManager.instance.PlaySound("Enemy Attack", transform.position);
+           //         StartCoroutine(Attack());
+           //     }
+           // }
+       // }
+   // }
+    //#endregion
 
-    #region Public Methods
+    //#region Public Methods
 
-    #region Overrides
+    //#region Overrides
     public override void TakeHit(float damage, Vector3 hitPoint, Vector3 hitDirection)
     {
-        AudioManager.instance.PlaySound("Impact", transform.position);
+        //AudioManager.instance.PlaySound("Impact", transform.position);
         if (damage >= health)
         {
             // Invoke the action if not null.
             OnDeathStatic?.Invoke();
 
-            AudioManager.instance.PlaySound("Enemy Death", transform.position);
+          //  AudioManager.instance.PlaySound("Enemy Death", transform.position);
             Destroy(Instantiate(deathEffect.gameObject, hitPoint, Quaternion.FromToRotation(Vector3.forward, hitDirection)), deathEffect.main.startLifetime.constant);
         
         }
@@ -130,31 +126,32 @@ public class Enemy : BaseLivingEntity
         //==============Jina, Don't delete this! Get score when kill the enemy=====================//
             
     }
-    #endregion
+    //#endregion
 
-    public void SetCharacteristics(float moveSpeed, int hitsToKillPlayer, float enemyHealth, Color skinColor)
-    {
+    //public void SetCharacteristics(float moveSpeed, int hitsToKillPlayer, float enemyHealth, Color skinColor)
+    //{
         // Speed
-        _pathfinder.speed = moveSpeed;
+       // _pathfinder.speed = moveSpeed;
 
         // Damage and Health
-        if (_hasTarget) _damage = Mathf.Ceil(_targetEntity.startingHealth / hitsToKillPlayer);
-        startingHealth = enemyHealth;
+        //if (_hasTarget) _damage = Mathf.Ceil(_targetEntity.startingHealth / hitsToKillPlayer);
+        //startingHealth = enemyHealth;
 
         // Appearance
-        _skinMaterial = GetComponent<Renderer>().material;
-        _skinMaterial.color = skinColor;
-        _originalColour = _skinMaterial.color;
-    }
-    #endregion
+        //_skinMaterial = GetComponent<Renderer>().material;
+        //_skinMaterial.color = skinColor;
+        //_originalColour = _skinMaterial.color;
+    //}
+    //#endregion
 
-    #region Private Methods
-    private void OnTargetDeath()
-    {
+    //#region Private Methods
+   // private void OnTargetDeath()
+   // {
         //_hasTarget = false;
-        _currentState = EnemyState.Idle;
-    }
+     //   _currentState = EnemyState.Idle;
+   // }
 
+/*
     private IEnumerator Attack()
     {
         _currentState = EnemyState.Attacking;
@@ -188,8 +185,9 @@ public class Enemy : BaseLivingEntity
         _skinMaterial.color = _originalColour;
         _currentState = EnemyState.Chasing;
         _pathfinder.enabled = true;
-    }
+    }*/
 
+/*
     private IEnumerator UpdatePath()
     {
         // Limit the frequency of updates to ease CPU cycles.
@@ -212,5 +210,5 @@ public class Enemy : BaseLivingEntity
             yield return new WaitForSeconds(refreshRate);
         }
     }
-    #endregion
+    //#endregion*/
 }

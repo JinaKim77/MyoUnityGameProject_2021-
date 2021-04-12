@@ -33,9 +33,9 @@ public class MapGenerator : MonoBehaviour
     private Transform[,] _tileMap;
     #endregion
 
-    #region Unity Methods
-    private void Awake() => FindObjectOfType<Spawner>().OnNewWave += OnNewWave;
-    #endregion
+    //#region Unity Methods
+    //private void Awake() => FindObjectOfType<Spawner>().OnNewWave += OnNewWave;
+    //#endregion
 
     private void OnNewWave(int waveNumber)
     {

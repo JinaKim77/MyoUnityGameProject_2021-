@@ -19,7 +19,7 @@ public class GunController : MonoBehaviour
     //#endregion
 
     //#region Unity Methods
-    private void Start() { }
+    //private void Start() { }
     //#endregion
 
     //#region Implementation of IFireable
