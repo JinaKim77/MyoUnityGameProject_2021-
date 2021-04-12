@@ -5,6 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Shootable
+  - Maptile
+  - Obstacle
+  - Enemy
+  - Projectile
+  - PlayerEyes
+  - Bag
+  - Box
+  - Bullet
+  - Gun
   layers:
   - Default
   - TransparentFX
