@@ -5,6 +5,7 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     public float enemyHealth = 50f;
+    [SerializeField] int killValue = 10;
     EnemyAI enemyAI;
     public GameObject enemyDeathEffect;
 
@@ -25,6 +26,8 @@ public class Target : MonoBehaviour
             //play the sound
             FindObjectOfType<AudioManager>().Play("EnemyDeath");
 
+            FindObjectOfType<GameSession>().addScore(killValue);
+            
             //Kill the target object!
             EnemyDead();
         }

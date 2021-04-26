@@ -87,7 +87,7 @@ public class GameSession : MonoBehaviour
 
     private void ResetGameSession()
     {
-        SceneManager.LoadScene(4); //send back to the start scene
+        SceneManager.LoadScene(3); //send back to the start scene
         Destroy(gameObject);
     }
 

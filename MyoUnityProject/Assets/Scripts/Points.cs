@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class Points : MonoBehaviour
 {
     [SerializeField] int coinValue = 1;
-    //public GameObject pickupEffect;
     Ray ray;
     RaycastHit hit;
     [SerializeField] float pickupDistance = 15f;
@@ -24,8 +23,6 @@ public class Points : MonoBehaviour
     }
     void Update()
     {
-        //rotate the pickup object
-       // transform.Rotate(90 * Time.deltaTime, 0,0);
        ray = mainCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
 
        if(Physics.Raycast(ray, out hit, pickupDistance, layer))
