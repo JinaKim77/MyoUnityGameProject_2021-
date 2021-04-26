@@ -2,7 +2,7 @@
 ###### Developer : Jina Kim, G00353420  
 <br>
 
-##Overview
+## Overview
 
 The purpose of this project was to explore Gesture-Based UI. 
 The technology I chose to use was the Myo Armband, designed by Thalmic Labs. 
@@ -23,5 +23,5 @@ Connect Myo armband.
 
 #### Further Information
 Further details about this project is documented in the [Research and Development Document](https://github.com/JinaKim77/MyoUnityGameProject_2021-/blob/main/DevelopmentDocument/DevelopmentDocument.pdf).  
-For a look at the game demo. Navigate to the [Gameplay recording](...) folder to view the mp4.  
+
  
