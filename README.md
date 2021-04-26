@@ -14,6 +14,6 @@ Connect Myo armband.
 <br>
 
 #### Further Information
-Further details about this project is documented in the [Research and Development Document](https://github.com/JinaKim77/MyoUnityGameProject_2021-/blob/main/Document.docx).  
+Further details about this project is documented in the [Research and Development Document](https://github.com/JinaKim77/MyoUnityGameProject_2021-/blob/main/DevelopmentDocument/DevelopmentDocument.pdf).  
 For a look at the game demo. Navigate to the [Gameplay recording](...) folder to view the mp4.  
  
