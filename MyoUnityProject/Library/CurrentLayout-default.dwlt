@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 677, y: 492}
-  m_MaxSize: {x: 12002, y: 14042}
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 12004, y: 14042}
   vertical: 1
-  controlID: 63
+  controlID: 73
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,10 +138,10 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 460
-  m_MinSize: {x: 677, y: 221}
-  m_MaxSize: {x: 12002, y: 4021}
+  m_MinSize: {x: 679, y: 221}
+  m_MaxSize: {x: 12004, y: 4021}
   vertical: 0
-  controlID: 64
+  controlID: 74
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -422,23 +422,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 4c2e0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 7e98faffb698faff46a9faff7abffaff68affcffcac3fcff28d8fcff52edfcffb001fdffa216fdff8e42fdff0a14ffff2414ffff4814ffff7014ffff0423ffff6037ffffdebdffffd4d0ffffe4f8ffff3efbffffd03900001a3a0000663b000070d300007a440100dc440100824501003847010002480100d0480100444f0100a64f0100225001009c570100fe570100
+      m_ExpandedIDs: c012ffffe63effff94c7fffff4f9ffff3efbfffff4ffffffb8640000e8660000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Boxes
-        m_OriginalName: Boxes
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -184476
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 7}
       m_SearchString: 
@@ -741,19 +741,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 62
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: 62
   m_LastProjectPath: C:\Users\gina7\Desktop\MyoProject_G00353420\MyoUnityGameProject_2021-\MyoUnityProject
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 446}
-    m_SelectedIDs: ce380000
-    m_LastClickedID: 14542
+    m_SelectedIDs: 42380000
+    m_LastClickedID: 14402
     m_ExpandedIDs: 000000003e38000040380000423800004438000046380000483800004a3800004c3800004e38000050380000523800005438000056380000583800005a3800005c3800005e38000060380000623800006438000066380000683800006a3800006c3800006e38000070380000723800007438000076380000783800007a3800007c3800007e38000080380000823800008438000086380000883800008a3800008c3800008e380000903800009238000094380000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

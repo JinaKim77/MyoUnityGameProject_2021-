@@ -14,7 +14,7 @@ public class Target : MonoBehaviour
         enemyAI = GetComponent<EnemyAI>();
     }
     
-    //Should be able to damage the target(Enemy object)
+    ///Should be able to damage the target(Enemy object)
     public void TakeDamage(float amount)
     {
         enemyHealth -= amount;
