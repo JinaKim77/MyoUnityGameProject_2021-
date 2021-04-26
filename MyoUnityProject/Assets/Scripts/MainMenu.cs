@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
-{
-    public void PlayGame ()
+public class MainMenu : MonoBehaviour {
+	
+	public void PlayGame ()
     {
         SceneManager.LoadScene(1); 
     }
@@ -19,5 +19,10 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Quit!");
         Application.Quit();
+    }
+
+    public void Back()
+    {
+         SceneManager.LoadScene(0); 
     }
 }

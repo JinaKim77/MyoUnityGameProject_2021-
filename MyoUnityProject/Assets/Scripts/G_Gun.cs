@@ -23,8 +23,6 @@ public class G_Gun : MonoBehaviour
     //Weapon Effect
     public GameObject impactEffect;
     public Transform gunPos;
-    public float xGap;
-    public float yGap;
     
     private Pose _lastPose = Pose.Unknown;
     private bool sameMovement = false;
@@ -39,6 +37,12 @@ public class G_Gun : MonoBehaviour
     private int currentAmmo;
     private bool isReloading = false;
     public Animator animator;
+    private int xHit = 0;
+	private int yHit = 0;
+    public float speed;
+	private int zHit = 0;
+	private float MinClamp = -50;
+	private float MaxClamp = 50;
 
     void Start()
     {
@@ -58,50 +62,16 @@ public class G_Gun : MonoBehaviour
 
     void FixedUpdate ()
 	{
-        ThalmicMyo thalmicMyo = myo.GetComponent<ThalmicMyo> ();
-        // Check if the pose has changed since last update.
-        // The ThalmicMyo component of a Myo game object has a pose property that is set to the
-        // currently detected pose (e.g. Pose.Fist for the user making a fist). If no pose is currently
-        // detected, pose will be set to Pose.Rest. If pose detection is unavailable, e.g. because Myo
-        // is not on a user's arm, pose will be set to Pose.Unknown.
-        if (thalmicMyo.pose != _lastPose) {
-            _lastPose = thalmicMyo.pose;
-            if (thalmicMyo.pose == Pose.WaveOut) {
-                sameMovement = true;
-            }
-          }
-        else {
-          sameMovement = false;
-        }
+		if( Input.GetKeyDown( KeyCode.RightArrow )){
+			yHit++;
+		}
+		if( Input.GetKeyDown( KeyCode.LeftArrow )){
+			yHit--;
+		}
+		this.transform.rotation = Quaternion.Lerp(this.transform.rotation, Quaternion.Euler(xHit*90,Mathf.Clamp(yHit*10, MinClamp, MaxClamp),zHit*90), Time.deltaTime*speed);
 
+	}
 
-
-        var JointObject =  GameObject.Find("Stick");
-        float x = JointObject.transform.rotation.eulerAngles.x;
-        float y = JointObject.transform.rotation.eulerAngles.y;
-        float z = JointObject.transform.rotation.eulerAngles.z;
-        float moveHorizontal = Input.GetAxis ("Horizontal");
-        float moveVertical = Input.GetAxis ("Vertical");
-
-        if (0 + xGap < x && x < 180)
-        {
-            moveVertical = 1;
-        }
-        else if (180  < x && x < 360 - xGap)
-        {
-            moveVertical = -1;
-        }
-
-
-        if (0 + yGap < y && y < 180)
-        {
-            moveHorizontal = 1;
-        }
-        else if (180  < y && y < 360 - yGap)
-        {
-            moveHorizontal = -1;
-        }
-    }
     void Update()
     {
         if(isReloading)
@@ -155,9 +125,6 @@ public class G_Gun : MonoBehaviour
         bulletCasing.Play();
 
         currentAmmo--;
-
-        //Vibrate when Shooting
-        //myo.Vibrate (VibrationType.Medium);
 
         RaycastHit hit;
         if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))

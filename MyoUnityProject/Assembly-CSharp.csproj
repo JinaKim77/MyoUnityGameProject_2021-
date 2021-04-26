@@ -43,7 +43,6 @@
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
-     <Compile Include="Assets\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\EnvironmentPack\Common Scripts\Turn_Move.cs" />
      <Compile Include="Assets\Gun3\Scripts\Flaregun.cs" />
      <Compile Include="Assets\Gun3\Scripts\flarebullet.cs" />
@@ -83,7 +82,6 @@
      <Compile Include="Assets\Scripts\LevelControl.cs" />
      <Compile Include="Assets\Scripts\LevelControl1.cs" />
      <Compile Include="Assets\Scripts\LightController.cs" />
-     <Compile Include="Assets\Scripts\LoadOnClick.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\MusicPlayer.cs" />

@@ -33,7 +33,7 @@ public class CanvasController : MonoBehaviour {
 	void Update () {
 		// Access the ThalmicMyo component attached to the Myo game object.
 		ThalmicMyo thalmicMyo = myo.GetComponent<ThalmicMyo> ();
-		LoadOnClick load = GetComponent<LoadOnClick>();
+		MainMenu load = GetComponent<MainMenu>();
 		// Check if the pose has changed since last update.
 		// The ThalmicMyo component of a Myo game object has a pose property that is set to the
 		// currently detected pose (e.g. Pose.Fist for the user making a fist). If no pose is currently

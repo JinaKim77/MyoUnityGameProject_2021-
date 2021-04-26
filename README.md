@@ -2,6 +2,14 @@
 ###### Developer : Jina Kim, G00353420  
 <br>
 
+##Overview
+
+The purpose of this project was to explore Gesture-Based UI. 
+The technology I chose to use was the Myo Armband, designed by Thalmic Labs. 
+I designed a game where zombies are spawned on screen when a player enter the trigger, and you have to shoot them 
+before they attack you.
+The Myo armband is used to control your aim and to fire shoots as well. 
+
 #### Requirements
 Unity 3D (Project developed in Unity 2019.4.11f1)  
 Thalmic Myo Armband  
