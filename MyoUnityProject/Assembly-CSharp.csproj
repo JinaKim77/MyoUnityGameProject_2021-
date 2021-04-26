@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{e371c879-ccf7-0214-ecc1-e790204013b4}</ProjectGuid>
+    <ProjectGuid>{fd86807f-8599-9350-f077-0839ebd04c26}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -674,37 +674,37 @@
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>C:/Users/gina7/Desktop/Myo_2021/MyoGame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>C:/Users/gina7/Desktop/MyoProject_G00353420/MyoUnityGameProject_2021-/MyoUnityProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>C:/Users/gina7/Desktop/Myo_2021/MyoGame/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>C:/Users/gina7/Desktop/MyoProject_G00353420/MyoUnityGameProject_2021-/MyoUnityProject/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>C:/Users/gina7/Desktop/Myo_2021/MyoGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>C:/Users/gina7/Desktop/MyoProject_G00353420/MyoUnityGameProject_2021-/MyoUnityProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>C:/Users/gina7/Desktop/Myo_2021/MyoGame/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+        <HintPath>C:/Users/gina7/Desktop/MyoProject_G00353420/MyoUnityGameProject_2021-/MyoUnityProject/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>C:/Users/gina7/Desktop/Myo_2021/MyoGame/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+        <HintPath>C:/Users/gina7/Desktop/MyoProject_G00353420/MyoUnityGameProject_2021-/MyoUnityProject/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-        <HintPath>C:/Users/gina7/Desktop/Myo_2021/MyoGame/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+        <HintPath>C:/Users/gina7/Desktop/MyoProject_G00353420/MyoUnityGameProject_2021-/MyoUnityProject/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
-        <HintPath>C:/Users/gina7/Desktop/Myo_2021/MyoGame/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+        <HintPath>C:/Users/gina7/Desktop/MyoProject_G00353420/MyoUnityGameProject_2021-/MyoUnityProject/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>C:/Users/gina7/Desktop/Myo_2021/MyoGame/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+        <HintPath>C:/Users/gina7/Desktop/MyoProject_G00353420/MyoUnityGameProject_2021-/MyoUnityProject/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
-        <HintPath>C:/Users/gina7/Desktop/Myo_2021/MyoGame/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+        <HintPath>C:/Users/gina7/Desktop/MyoProject_G00353420/MyoUnityGameProject_2021-/MyoUnityProject/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>C:/Users/gina7/Desktop/Myo_2021/MyoGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+        <HintPath>C:/Users/gina7/Desktop/MyoProject_G00353420/MyoUnityGameProject_2021-/MyoUnityProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>C:/Users/gina7/Desktop/Myo_2021/MyoGame/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+        <HintPath>C:/Users/gina7/Desktop/MyoProject_G00353420/MyoUnityGameProject_2021-/MyoUnityProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
