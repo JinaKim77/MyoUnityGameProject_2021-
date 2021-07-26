@@ -14,7 +14,7 @@
 ## Project Details
 Heading     | Details
 ------------|-------------------------------------
-Project     | [Development Document](https://github.com/JinaKim77/MyoUnityGameProject_2021-/blob/main/DevelopmentDocument/DevelopmentDocument.pdf)
+Project     | [Spec](https://github.com/JinaKim77/MyoUnityGameProject_2021-/blob/main/Gesture%20Based%20UI%20Project.pdf)
 Course      | BSc (Hons) in Software Development
 Module      | Gesture UI Development
 Authors     | Jina Kim 
