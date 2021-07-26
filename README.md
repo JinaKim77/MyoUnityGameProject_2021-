@@ -1,6 +1,30 @@
-# Myo Zombie Shooter
+<h2 align="center">
+    Gesture Recognition Project
+</h3>
+<br>
+
+## Myo Zombie Shooter Game Project
 ###### Developer : Jina Kim, G00353420  
 <br>
+
+<p align="center">
+  <img src="./GMIT_Logo.PNG" width=700 height=250/>
+</p>
+
+## Project Details
+Heading     | Details
+------------|-------------------------------------
+Project     | [Development Document](https://github.com/JinaKim77/MyoUnityGameProject_2021-/blob/main/DevelopmentDocument/DevelopmentDocument.pdf)
+Course      | BSc (Hons) in Software Development
+Module      | Gesture UI Development
+Authors     | Jina Kim 
+ID          | G00353420
+Lecturer    | Damien Costello
+
+## Game Play
+<p align="center">
+  <img src="./GamePlay.PNG" width=800 height=400/>
+</p>
 
 ## Overview
 
